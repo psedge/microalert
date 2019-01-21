@@ -273,7 +273,7 @@
             mapTypeId: google.maps.MapTypeId.TERRAIN
         });
 
-        setInterval(function() {
+        function populateMarkers() {
             $.get("https://m9po41o830.execute-api.eu-west-1.amazonaws.com/dev/event", function(data, status) {
                 console.log(status);
 
@@ -293,7 +293,15 @@
                     )
                 }
             });
-        }, 500)
+        }
+
+        // Wait a bit before we start our update loop to get those animations working properly
+        populateMarkers();
+        setTimeout(function() {
+            setInterval(function() {
+                populateMarkers()
+            }, 500)
+        }, 2000);
     }
 </script>
 
