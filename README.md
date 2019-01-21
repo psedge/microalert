@@ -1,6 +1,8 @@
 ![logo](assets/logo.png)
 
-A basic implementation of a mesh network using low-power, low-cost micro:bit devices for disaster reporting
+A basic implementation of a mesh network using low-power, low-cost micro:bit devices for disaster reporting. Created for Visa Graduate Hackathon, January 2019.
+
+[thekeshavgoel](https://github.com/thekeshavgoel) || [HartBlanc](https://github.com/HartBlanc) || [salmansamie](https://github.com/salmansamie)
 
 ### How the network works
 

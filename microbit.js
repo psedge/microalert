@@ -3,7 +3,8 @@ let i = -50
 let myId = "d"
 let icon = ""
 let stop = 0
-let prev_msg = ""
+let list = ['']
+
 // basic.forever(function () {
 //     let c = input.temperature()
 //     // let f = (c * 18) / 10 + 32
@@ -69,7 +70,7 @@ radio.onReceivedString(function (receivedString) {
         if (stop == 0) {
             if (msg[0] != myId) {
                 radio.sendString(msg);
-                basic.showIcon(IconNames.No)
+                basic.showIcon(IconNames.LeftTriangle)
                 if (msg[1] == '1' && msg[2] == '1') {
                     show_flash()
                     stop = 1
@@ -86,13 +87,12 @@ radio.onReceivedString(function (receivedString) {
     }
     else {
         if (msg[1] == "0" && msg[2] == "0") {
-            if (prev_msg != msg) {
+            if (list.indexOf(msg) == -1) {
                 serial.writeString(msg)
                 radio.sendString(msg[0] + "1" + "0" + msg.substr(3, msg.length - 3))
                 show_flash()
-                prev_msg = msg
+                list.push(msg)
             }
         }
     }
 })
-
