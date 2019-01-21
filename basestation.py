@@ -4,14 +4,7 @@ import json
 import random
 
 def getCoords():
-    return [str(random.uniform(-25, 20)), str(random.uniform(120, 145))]
-
-coords = {
-    'a': [str(random.uniform(-25, 20)), str(random.uniform(130, 135))],
-    'b': [str(random.uniform(-25, 20)), str(random.uniform(130, 135))],
-    'c': [str(random.uniform(-25, 20)), str(random.uniform(130, 135))],
-    'd': [str(random.uniform(-25, 20)), str(random.uniform(130, 135))],
-}
+    return [str(random.uniform(-9, 5)), str(random.uniform(100, 150))]
 
 while True:
     try:
