@@ -1,5 +1,5 @@
 # microalert
-![logo](/assets/logo.png)
+![logo](assets/logo.png)
 
 A basic implementation of a mesh network using low-power, low-cost micro:bit devices for disaster reporting
 
@@ -17,4 +17,4 @@ The mesh is built up of BBC micro:bit devices, each allowing the user to send a 
 
 To run the GUI, simply load the site at [psedge.github.io/microalert](https://psedge.github.io/microalert), or open index.html locally.
 
-![GUI](/assets/gui.png)
+![GUI](assets/gui.png)
